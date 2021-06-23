@@ -9,9 +9,85 @@ const jobTypes = {
   programmer: 'Any Ship!'
 };
 
+// class String [
+//   constructor(name) {
+//     this.name;
+//   }
+// ]
+
+// *** EXAMPLE TO CREATE AN INSTANCE ***
+// class Car {
+//   constructor(make, model, year) {
+//     this.make = make;
+//     this.model = model;
+//     this.year = year;
+//   }
+
+//   get() {
+//     return this.year;
+//   }
+
+//   honk(sound) {
+//     return sound;
+//   }
+// }
+
+// const honda = new Car("Honda", "Civic", 2008);
+// const kia = new Car("Kia", "Soul", "2015");
+
+
+
 // Your code will go here
+// Build CrewMember class
 
+// Use class keyword and name your class
 
+// Use the constructor() to take in certain attributes
+// Assign attributes (name, job, specialSkill, ship) to local variables using the this 'this' keyword
+
+class CrewMember {
+  constructor(name, job, specialSkill, ship) {
+    this.name = name;
+    this.job = job;
+    this.specialSkill = specialSkill;
+    this.ship = null;
+  }
+
+// The function should allow a crew member to enter the ship
+// It should return what ship the crew member is entering in
+
+  enterShip(ship) {
+    this.ship = ship;
+    ship.crew.push(this);
+  }
+};
+
+// This class should create a ship
+// It should have a name, a type, an ability, and an empty crew
+
+class Ship {
+  constructor(name, type, ability) {
+    this.name = name;
+    this.type = type;
+    this.ability = ability;
+    this.crew = [];
+  }
+
+// A mission statement can be returned based on ability
+// If the crew is empty, return "Can't perform a mission yet"
+// Else if a crew member equals to commander, return "Can't perform mission yet"
+// Else return the ability of the crew member
+
+missionStatement() {
+  if (this.crew.kength === 0) {
+    return `Can't perform a mission yet.`;
+    } else if this.ability === commander {
+    return `Can't perform a mission yet.`
+     else if (this.crew.length > 0) {
+    return this.ability
+    }
+  }
+};
 
 
 
